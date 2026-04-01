@@ -8,15 +8,15 @@ Proxy Nginx déployé sur Google Cloud Run pour rediriger le trafic TCP vers le 
 | **VPS cible** | `167.99.88.149:443` |
 | **Port d'écoute proxy** | `8080` |
 | **Région VPS** | `europe-west3` (Francfort, Allemagne) |
-| **Région Cloud Run** | `africa-south1` (Johannesburg, Afrique du Sud) |
+| **Région Cloud Run** | `europe-west2` (Londres, Royaume-Uni) |
 | **Type de proxy** | TCP Stream (Layer 4) |
 
 ## Déploiement
 ```bash
-gcloud run deploy ultra-speed-proxy \
+gcloud run deploy world-solution-vip \
   --source . \
   --platform managed \
-  --region africa-south1 \
+  --region europe-west2 \
   --allow-unauthenticated \
   --port 8080 \
   --memory 512Mi \
